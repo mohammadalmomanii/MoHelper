@@ -9,12 +9,7 @@ android {
     buildFeatures {
         viewBinding =true
     }
-    publishing {
-        singleVariant("release") {
-            withSourcesJar()
-            withJavadocJar()
-        }
-    }
+
     defaultConfig {
         minSdk = 30
 
@@ -63,9 +58,7 @@ publishing {
             artifactId = "MoHelper"
             version = "1.0"
 
-            afterEvaluate {
-                from(components["release"])
-            }
+          
         }
     }
 }
