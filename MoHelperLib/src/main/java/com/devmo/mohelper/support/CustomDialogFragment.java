@@ -12,8 +12,8 @@ import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.FragmentManager;
 
 import com.devmo.mohelper.MainInterface;
-import com.devmo.mohelper.R;
-import com.devmo.mohelper.databinding.FragmentCustomeDialogBinding;
+import com.devmo.mohelperlib.R;
+import com.devmo.mohelperlib.databinding.FragmentCustomeDialogBinding;
 
 
 public class CustomDialogFragment extends DialogFragment {

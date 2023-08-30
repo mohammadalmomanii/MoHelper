@@ -6,7 +6,9 @@ plugins {
 android {
     namespace = "com.devmo.mohelperlib"
     compileSdk = 33
-
+    buildFeatures {
+        viewBinding =true
+    }
     defaultConfig {
         minSdk = 24
 

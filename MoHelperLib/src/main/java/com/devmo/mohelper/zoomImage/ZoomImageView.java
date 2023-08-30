@@ -37,7 +37,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.core.view.ScaleGestureDetectorCompat;
 
-import com.devmo.mohelper.R;
+import com.devmo.mohelperlib.R;
 
 /**
  * zoomImageView is a pinch-to-zoom extension of {@link ImageView}, providing a smooth

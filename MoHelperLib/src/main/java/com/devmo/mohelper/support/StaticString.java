@@ -1,7 +1,7 @@
 package com.devmo.mohelper.support;
 
 
-import com.devmo.mohelper.R;
+import com.devmo.mohelperlib.R;
 
 public enum StaticString {
     MRE(159632),

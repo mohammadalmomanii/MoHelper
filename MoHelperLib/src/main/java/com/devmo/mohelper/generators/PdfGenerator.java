@@ -13,7 +13,7 @@ import android.text.Layout;
 import android.text.StaticLayout;
 import android.text.TextPaint;
 
-import com.devmo.mohelper.R;
+import com.devmo.mohelperlib.R;
 import com.devmo.mohelper.api.model.Data;
 
 import java.io.File;

@@ -7,8 +7,8 @@ import android.view.ViewGroup;
 
 import androidx.fragment.app.DialogFragment;
 
-import com.devmo.mohelper.R;
-import com.devmo.mohelper.databinding.FragmentLoadingBinding;
+import com.devmo.mohelperlib.R;
+import com.devmo.mohelperlib.databinding.FragmentLoadingBinding;
 
 
 public class LoadingFragment extends DialogFragment {

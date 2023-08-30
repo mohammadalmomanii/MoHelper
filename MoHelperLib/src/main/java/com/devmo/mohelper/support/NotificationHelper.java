@@ -18,7 +18,7 @@ import androidx.annotation.RequiresApi;
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
 
-import com.devmo.mohelper.R;
+import com.devmo.mohelperlib.R;
 
 import java.util.Timer;
 import java.util.TimerTask;
