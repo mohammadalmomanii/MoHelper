@@ -5,19 +5,25 @@ plugins {
 
 android {
     namespace = "com.devmo.mohelperlib"
-    compileSdkVersion(33)
+    compileSdk = 33
     buildFeatures {
-        viewBinding = true
+        viewBinding =true
+    }
+    publishing {
+        singleVariant("release") {
+            withSourcesJar()
+            withJavadocJar()
+        }
     }
     defaultConfig {
-        minSdkVersion(24)
+        minSdk = 24
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
     }
 
     buildTypes {
-        getByName("release") {
+        release {
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
@@ -30,6 +36,7 @@ android {
         targetCompatibility = JavaVersion.VERSION_1_8
     }
 }
+
 
 dependencies {
     implementation("androidx.appcompat:appcompat:1.6.1")
@@ -49,15 +56,17 @@ dependencies {
     implementation("com.itextpdf:itextpdf:5.5.13.2")
     implementation("androidx.print:print:1.0.0")
 }
+publishing {
+    publications {
+        register<MavenPublication>("release") {
+            groupId = "com.github.mohammadalmomanii"
+            artifactId = "MoHelper"
+            version = "1.0"
 
-afterEvaluate {
-    publishing {
-        publications {
-            create<MavenPublication>("release") {
-                groupId = "com.github.mohammadalmomanii"
-                artifactId = "MoHelper"
-                version = "1.0"
+            afterEvaluate {
+                from(components["release"])
             }
         }
     }
 }
+
