@@ -9,7 +9,12 @@ android {
     buildFeatures {
         viewBinding =true
     }
-
+    publishing {
+        singleVariant("release") {
+            withSourcesJar()
+            withJavadocJar()
+        }
+    }
     defaultConfig {
         minSdk = 30
 
@@ -40,14 +45,20 @@ dependencies {
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 
+    /*********************|retrofit|*********************/
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-scalars:2.9.0")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
-    implementation("com.github.bumptech.glide:glide:4.13.0")
 
-    implementation("org.apache.poi:poi:5.1.0")
-    implementation("org.apache.poi:poi-ooxml:5.1.0")
 
+    /*********************|Get Image via url|*********************/
+    implementation("com.github.bumptech.glide:glide:4.16.0")
+
+    /*********************|generate excl file|*********************/
+    implementation("org.apache.poi:poi:5.2.3")
+    implementation("org.apache.poi:poi-ooxml:5.2.3")
+
+    /*********************|generate pdf file|*********************/
     implementation("com.itextpdf:itextpdf:5.5.13.2")
     implementation("androidx.print:print:1.0.0")
 }
@@ -58,7 +69,9 @@ publishing {
             artifactId = "MoHelper"
             version = "1.0"
 
-          
+            afterEvaluate {
+                from(components["release"])
+            }
         }
     }
 }
