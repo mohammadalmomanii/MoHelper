@@ -15,4 +15,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "MoHelper"
 include(":app")
-include(":MoHelperLib")
+include(":MoH    maven { url = uri(\"https://jitpack.io\") }\nelperLib")
